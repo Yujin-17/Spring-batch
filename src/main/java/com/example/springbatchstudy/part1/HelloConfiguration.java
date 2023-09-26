@@ -25,7 +25,7 @@ public class HelloConfiguration {
     @Bean
     public Job helloJob() { // spring batch 의 실행단위
         return jobBuilderFactory.get("helloJob")
-                .incrementer(new RunIdIncrementer())
+                .incrementer(new RunIdIncrementer()) // 이 설정 추가시 항상 다른 JobInstance 실행
                 .start(this.helloStep())
                 .build();
     }
