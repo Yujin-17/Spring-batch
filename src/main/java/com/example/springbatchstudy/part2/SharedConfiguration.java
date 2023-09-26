@@ -33,7 +33,7 @@ public class SharedConfiguration {
 
     @Bean
     public Step shareStep() {
-        return stepBuilderFactory.get("shareStep")
+        return stepBuilderFactory.get("shareStep1")
                 .tasklet((contribution, chunkContext) -> {
                     StepExecution stepExecution = contribution.getStepExecution();
                     ExecutionContext stepExecutionContext = stepExecution.getExecutionContext();
@@ -59,7 +59,7 @@ public class SharedConfiguration {
 
     @Bean
     public Step shareStep2() {
-        return stepBuilderFactory.get("shareStep")
+        return stepBuilderFactory.get("shareStep2")
                 .tasklet((contribution, chunkContext) -> {
                     StepExecution stepExecution = contribution.getStepExecution();
                     ExecutionContext stepExecutionContext = stepExecution.getExecutionContext();
